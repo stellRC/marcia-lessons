@@ -330,6 +330,7 @@ border-radius: 100%;
 @media (hover:hover) {
     a:hover {
         color: antiquewhite;
+        text-decoration-line: underline;
     }
 }
 
