@@ -63,7 +63,7 @@ i {
 }
 
 .main-text {
-    padding: 2rem;
+    padding: 1rem;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
@@ -215,6 +215,10 @@ border-radius: 100%;
 
     i {
         display: contents;
+    }
+
+    .main-text {
+        padding: 2rem;
     }
 
  
