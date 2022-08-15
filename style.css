@@ -92,7 +92,7 @@ i {
 }
 
 .title {
-      font-size: 80px;
+      font-size: 50px;
       z-index: 200;
 }
 
@@ -135,7 +135,7 @@ i {
     justify-content: space-evenly;
     gap: .5rem;
     padding: .5rem 0;
-    font-size: 20px;
+    font-size: 18px;
     flex-wrap: wrap;
     
 }
@@ -148,8 +148,8 @@ i {
 }
 
 .about-text p {
-    font-size: 22px;
-    width: 80%;
+    font-size: 20px;
+    max-width: 20ch;
     margin-bottom: 1rem;
 }
 
@@ -178,6 +178,12 @@ i {
    bottom: 0;
    left: 0; */
    z-index: 100;
+}
+
+.price-list {
+    flex-direction: column;
+    padding-bottom: 1rem;
+    gap: .5rem;
 }
 
 
@@ -211,6 +217,7 @@ border-radius: 100%;
 
     .instruments {
         flex-wrap: nowrap;
+        font-size: 20px;
     }
 
     i {
@@ -220,6 +227,15 @@ border-radius: 100%;
     .main-text {
         padding: 2rem;
     }
+
+    .title {
+        font-size: 80px;
+    }
+
+    .price-list {
+        flex-direction: row;
+    }
+
 
  
 }
