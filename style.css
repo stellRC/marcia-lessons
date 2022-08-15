@@ -1,0 +1,262 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Aboreto', cursive;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body,
+main {
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #3E6F6B;
+}
+
+
+ul,
+li {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+i {
+    display: none;
+}
+
+.background-image {
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.header {
+    width: 50vw;
+    height: 35vh;
+    position: absolute;
+    right: 0;
+    background-image: url('./img/marcia.png');
+    
+    z-index: 100;
+
+}
+
+.main {
+    align-items: flex-end;
+}
+
+.main-text {
+    padding: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2rem;
+
+    text-transform: uppercase;
+    background-color: #317A86;
+  
+    /* height: 100vh; */
+    width: 100vw;
+    clip-path: polygon(0 0, 100% 50%, 100% 100%, 0 100%);
+}
+
+.main-location {
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 1rem;
+    align-items: flex-start;
+
+    font-size: 25px;
+    visibility: hidden;
+}
+
+.title-span {
+    font-size: 40px;
+}
+
+.title {
+      font-size: 80px;
+      z-index: 200;
+}
+
+.about {
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
+    width: 90vw;
+    height: 70vh;
+    padding: 2rem;
+    background-color: #61727C;
+    position: absolute;
+    right: 0;
+    z-index: 10;
+
+    clip-path: polygon(80% 0%, 100% 0, 100% 100%, 0 100%);
+
+}
+
+.contact-info {
+    /* position: absolute; */
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 1rem .5rem 1rem 2rem;
+    text-transform: uppercase;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    filter: grayscale(100%);
+    
+}
+
+.contact-info ul li {
+    padding-top: .5rem;
+    padding: .7rem;
+}
+
+.instruments {
+    justify-content: space-evenly;
+    gap: .5rem;
+    padding: .5rem 0;
+    font-size: 20px;
+    flex-wrap: wrap;
+    
+}
+
+.about-text {
+    text-align: end;
+    justify-content: flex-end;
+}
+
+.about-text p {
+    font-size: 22px;
+    width: 60%;
+    margin-bottom: 1rem;
+}
+
+.prices {
+    font-size: 25px;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    align-items: flex-end;
+    /* margin-bottom: 2rem; */
+}
+
+
+
+.bold {
+    font-weight: bold;
+}
+/* 
+.qr {
+    background-image: url('img/qr.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 10vh;
+} */
+
+.bottom-image {
+position: fixed;
+bottom: 5px;
+left: 0;
+background-image: url('./img/img-bottom.jpg'); 
+width: 40vw;
+height: 40vh;
+z-index: 100;
+border-radius: 100%;
+}
+
+@media (min-width: 450px) {
+    .contact-info {
+        font-size: 22px;
+    }
+
+    .instruments {
+        flex-wrap: nowrap;
+    }
+
+    i {
+        display: contents;
+    }
+
+ 
+}
+
+@media (min-width: 650px) {
+  .main-location {
+    visibility: visible;
+  }
+
+    .main-text {
+        clip-path: polygon(0 0, 20% 0, 100% 100%, 0 100%);
+    }
+
+    .instruments {
+        font-size: 22px;
+    }
+
+    .about-text p {
+        width: 40%;
+        font-size: 25px;
+    }
+
+   
+}
+
+@media (min-width: 750px) {
+    .header {
+        width: 55vw;
+        height: 60vh;
+    }
+}
+
+@media (min-width: 900px) {
+    .about {
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+ 
+}
+
+@media (min-width: 1400px) {
+
+    .header {
+        width: 100vw;
+    }
+    main {
+        display: flex;
+    }
+
+    .contact-info {
+        position: absolute;
+    }
+
+    .bottom-image {
+        display: none;
+    }
+
+    .about {
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 30% 100%);
+    }
+
+    .main-text {
+           height: 100vh;
+    }
+
+
+}
