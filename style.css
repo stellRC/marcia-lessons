@@ -16,6 +16,7 @@ main {
     min-height: 100vh;
     width: 100vw;
     background-color: #3E6F6B;
+    cursor: default;
 }
 
 
@@ -30,6 +31,10 @@ li {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+}
+a {
+    text-decoration: none;
+    color: black;
 }
 
 i {
@@ -93,17 +98,17 @@ i {
 
 .about {
     align-items: flex-end;
-    justify-content: flex-end;
+    justify-content: flex-start;
     flex-direction: column;
     width: 90vw;
     height: 70vh;
-    padding: 2rem;
+    padding: 1rem;
     background-color: #61727C;
     position: absolute;
     right: 0;
     z-index: 10;
 
-    clip-path: polygon(80% 0%, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(80% 0%, 100% 0, 100% 100%, 0% 0%);
 
 }
 
@@ -137,25 +142,43 @@ i {
 
 .about-text {
     text-align: end;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .about-text p {
     font-size: 22px;
-    width: 60%;
+    width: 80%;
     margin-bottom: 1rem;
 }
 
 .prices {
-    font-size: 25px;
+    font-size: 20px;
     padding-top: 1rem;
     display: flex;
     flex-direction: column;
     gap: .5rem;
     align-items: flex-end;
+    display: none;
     /* margin-bottom: 2rem; */
 }
 
+.mobile-prices {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    max-height: 80vw;
+    height: 60vh;
+    width: 100vw;
+    padding: 2rem;
+    font-size: 22px;
+    padding-top: 1rem;
+   /* position: relative;
+   bottom: 0;
+   left: 0; */
+   z-index: 100;
+}
 
 
 .bold {
@@ -211,7 +234,11 @@ border-radius: 100%;
     }
 
     .about-text p {
-        width: 40%;
+        width: 60%;
+        font-size: 25px;
+    }
+
+    .prices {
         font-size: 25px;
     }
 
@@ -219,24 +246,27 @@ border-radius: 100%;
 }
 
 @media (min-width: 750px) {
+
+
+
+}
+
+/* @media (min-width: 900px) {
+    .about {
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%);
+    }
     .header {
         width: 55vw;
         height: 60vh;
     }
-}
+ 
+} */
 
 @media (min-width: 900px) {
-    .about {
-        clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%);
-    }
-
- 
-}
-
-@media (min-width: 1400px) {
 
     .header {
         width: 100vw;
+        height: 60vh;
     }
     main {
         display: flex;
@@ -252,11 +282,31 @@ border-radius: 100%;
 
     .about {
         clip-path: polygon(100% 0, 100% 0, 100% 100%, 30% 100%);
+        justify-content: flex-end;
+        padding: 2rem;
     }
 
     .main-text {
            height: 100vh;
     }
 
+    .about-text p {
+        width: 40%;
+    }
 
+    .mobile-prices {
+        display: none;
+    }
+
+    .prices {
+        display: contents;
+    }
+
+
+}
+
+@media (hover:hover) {
+    a:hover {
+        color: antiquewhite;
+    }
 }
