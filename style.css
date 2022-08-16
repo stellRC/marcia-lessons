@@ -225,6 +225,7 @@ i {
 
 .price-list {
     flex-direction: column;
+    align-items: flex-start;
     padding-bottom: 1rem;
     gap: .5rem;
 }
@@ -233,14 +234,21 @@ i {
 .bold {
     font-weight: bold;
 }
-/* 
-.qr {
-    background-image: url('img/qr.png');
+
+.contact-info div {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: baseline;
+}
+
+.qr-code {
+    background-image: url('img/qr-2.png');
     background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
     height: 10vh;
-} */
+}
 
 .bottom-image {
 position: fixed;
