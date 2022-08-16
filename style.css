@@ -11,11 +11,36 @@
     display: none;
 }
 
+:root {
+    --background-color: rgb(62, 111, 107);
+    --main-color: rgb(49, 122, 134);
+    --about-color: rgb(97, 114, 124);
+    --text-color: rgb(0, 0, 0);
+    --highlight-color: rgba(255, 255, 255, 0);
+
+    --title-span-font: 40px;
+    --title-font: 50px;
+    --location-font: 25px;
+    --isntruments-font: 18px;
+    --contact-font: 16px;
+    --about-font: 20px;
+    --prices-font: 20px;
+    --mobile-prices-font: 22px;
+
+    --contact-450: 22px;
+    --isntruments-450: 20px;
+    --title-450: 80px;
+
+    --instruments-650: 22px;
+    --p-650: 25px;
+    --prices-650: 25px;
+}
+
 body,
 main {
     min-height: 100vh;
     width: 100vw;
-    background-color: #3E6F6B;
+    background-color: var(--background-color);
     cursor: default;
 }
 
@@ -34,16 +59,32 @@ li {
 }
 a {
     text-decoration: none;
-    color: black;
-    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+    color: var(--text-color);
+    -webkit-tap-highlight-color: var(--highlight-color) ; 
+    display: inline-block;
+    position: relative;
 }
 
+
+a::after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #591C21;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+  
 i {
     display: none;
 }
 
 .background-image {
-    background-position: right;
+    background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -52,11 +93,13 @@ i {
     width: 50vw;
     height: 35vh;
     position: absolute;
-    right: 0;
+    right: 10px;
     background-image: url('./img/marcia.png');
-    
+    border-radius: 100%;
     z-index: 100;
-
+    background-color: transparent;
+    border: none;
+    outline: none;
 }
 
 .main {
@@ -71,7 +114,7 @@ i {
     gap: 2rem;
 
     text-transform: uppercase;
-    background-color: #317A86;
+    background-color: var(--main-color);
   
     /* height: 100vh; */
     width: 100vw;
@@ -84,16 +127,16 @@ i {
     gap: 1rem;
     align-items: flex-start;
 
-    font-size: 25px;
+    font-size: var(--location-font);
     visibility: hidden;
 }
 
 .title-span {
-    font-size: 40px;
+    font-size: var(--title-span-font);
 }
 
 .title {
-      font-size: 50px;
+      font-size: var(--title-font);
       z-index: 200;
 }
 
@@ -104,7 +147,7 @@ i {
     width: 90vw;
     height: 70vh;
     padding: 1rem;
-    background-color: #61727C;
+    background-color: var(--about-color);
     position: absolute;
     right: 0;
     z-index: 10;
@@ -118,7 +161,7 @@ i {
     bottom: 0;
     left: 0;
     z-index: 20;
-    font-size: 16px;
+    font-size: var(--contact-font);
     font-weight: bold;
     padding: 1rem .5rem 1rem 2rem;
     text-transform: uppercase;
@@ -136,8 +179,9 @@ i {
     justify-content: space-evenly;
     gap: .5rem;
     padding: .5rem 0;
-    font-size: 18px;
+    font-size: var(--isntruments-font) ;
     flex-wrap: wrap;
+    font-weight: bolder;
     
 }
 
@@ -149,20 +193,20 @@ i {
 }
 
 .about-text p {
-    font-size: 20px;
+    font-size: var(--about-font);
     max-width: 20ch;
     margin-bottom: 1rem;
+    font-weight: bolder;
 }
 
 .prices {
-    font-size: 20px;
+    font-size: var(--prices-font);
     padding-top: 1rem;
     display: flex;
     flex-direction: column;
     gap: .5rem;
     align-items: flex-end;
     display: none;
-    /* margin-bottom: 2rem; */
 }
 
 .mobile-prices {
@@ -173,11 +217,9 @@ i {
     height: 60vh;
     width: 100vw;
     padding: 2rem;
-    font-size: 22px;
+    font-weight: 600;
+    font-size: var(--mobile-prices-font);
     padding-top: 1rem;
-   /* position: relative;
-   bottom: 0;
-   left: 0; */
    z-index: 100;
 }
 
@@ -211,14 +253,21 @@ z-index: 100;
 border-radius: 100%;
 }
 
+/* JS */
+
+.grayscale {
+    transform: scale(.9);
+    filter: grayscale(.7);
+}
+
 @media (min-width: 450px) {
     .contact-info {
-        font-size: 22px;
+        font-size: var(--contact-450);
     }
 
     .instruments {
         flex-wrap: nowrap;
-        font-size: 20px;
+        font-size: var(--isntruments-450);
     }
 
     i {
@@ -230,7 +279,7 @@ border-radius: 100%;
     }
 
     .title {
-        font-size: 80px;
+        font-size: var(--title-450);
     }
 
     .price-list {
@@ -251,42 +300,24 @@ border-radius: 100%;
     }
 
     .instruments {
-        font-size: 22px;
+        font-size: var(--instruments-650);
     }
 
     .about-text p {
-        /* width: 60%; */
-        font-size: 25px;
+        font-size: var(--p-650);
     }
 
     .prices {
-        font-size: 25px;
+        font-size: var(--prices-650);
     }
 
    
 }
 
-@media (min-width: 750px) {
-
-
-
-}
-
-/* @media (min-width: 900px) {
-    .about {
-        clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%);
-    }
-    .header {
-        width: 55vw;
-        height: 60vh;
-    }
- 
-} */
-
 @media (min-width: 900px) {
 
     .header {
-        width: 100vw;
+        width: 30vw;
         height: 60vh;
     }
     main {
@@ -329,9 +360,18 @@ border-radius: 100%;
 
 @media (hover:hover) {
     a:hover {
-        color: antiquewhite;
-        text-decoration-line: underline;
+        color: #591C21;
+        font-weight: bolder;
     }
+    a:hover::after{ 
+        width: 100%; 
+        left: 0; 
+      }
+
+      .header:hover {
+        transform: scale(.9);
+      }
+      
 }
 
 @media (min-width: 1100px) {

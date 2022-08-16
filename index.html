@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marcia Forman • Music Lessons</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +14,15 @@
 </head>
 <body>
   
-    <header class="header background-image"></header>
+    <button class="header background-image" data-audio>
+        <figure>
+            <figcaption aria-details="audio player"></figcaption>
+            <audio src="./img/01 There Will Never Be Another You.mp3" preload="metadata">
+                Your browser does not support the
+                <code>audio</code> element.
+            </audio>
+        </figure>
+    </button>
     <main class="main">
         <section class="main-text flex">
             <div class="main-location flex">
