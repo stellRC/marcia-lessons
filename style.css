@@ -116,6 +116,7 @@ i {
 
     text-transform: uppercase;
     background-color: var(--main-color);
+    position: relative;
   
     /* height: 100vh; */
     width: 100vw;
@@ -161,7 +162,7 @@ i {
     /* position: absolute; */
     bottom: 0;
     left: 0;
-    z-index: 20;
+    z-index: 200;
     font-size: var(--contact-font);
     font-weight: bold;
     padding: 1rem .5rem 2rem 2rem;
@@ -191,6 +192,7 @@ i {
     justify-content: flex-start;
     flex-direction: column;
     align-items: flex-end;
+    /* position: relative; */
 }
 
 .about-text p {
@@ -324,7 +326,7 @@ border-radius: 100%;
    
 }
 
-@media (min-width: 900px) {
+@media (min-width: 900px) and (min-height: 700px) {
 
     .header {
         width: 40vw;
@@ -370,6 +372,14 @@ border-radius: 100%;
     }
 
 
+}
+
+@media (min-width: 900px) and (max-height: 700px)  {
+    .header {
+        width: 30vw;
+        height: 70vh;
+        margin-top: 1rem;
+    }
 }
 
 @media (hover:hover) {
