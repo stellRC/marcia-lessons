@@ -164,7 +164,7 @@ i {
     z-index: 20;
     font-size: var(--contact-font);
     font-weight: bold;
-    padding: 1rem .5rem 1rem 2rem;
+    padding: 1rem .5rem 2rem 2rem;
     text-transform: uppercase;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     /* filter: grayscale(100%); */
